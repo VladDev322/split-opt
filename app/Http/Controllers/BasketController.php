@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BasketController extends Controller
 {
@@ -13,8 +14,11 @@ class BasketController extends Controller
     $orderId = session('orderId');
     if (!is_null($orderId)) {
       $order = Order::findOrFail($orderId);
+      return view('basket', compact('order'));
+    } else {
+      session()->flash('warning', 'Ваша корзина пуста!');
+      return redirect()->route('index');
     }
-    return view('basket', compact('order'));
   }
 
   public function basketConfirm(Request $request)
@@ -62,6 +66,8 @@ class BasketController extends Controller
     } else {
       $order->products()->attach($productId);
     }
+
+
 
     $product = Product::find($productId);
 
