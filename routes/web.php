@@ -28,11 +28,12 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('get-logout');
 
 Route::group([
   'middleware' => 'auth',
-  'namespace' => 'Admin',
+  'prefix' => 'admin',
 ], function () {
   Route::group(['middleware' => 'is_admin'], function () {
       Route::get('/orders', [OrderController::class,'index'])->name('home');
   });
+  Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
 });
 
 Route::get('/', [MainController::class,'index'])->name('index');
