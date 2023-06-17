@@ -33,7 +33,8 @@ Route::group([
   Route::group(['middleware' => 'is_admin'], function () {
       Route::get('/orders', [OrderController::class,'index'])->name('home');
   });
-  Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
+  Route::resource('/categories', App\Http\Controllers\Admin\CategoryController::class);
+  Route::resource('/products', App\Http\Controllers\Admin\ProductController::class);
 });
 
 Route::get('/', [MainController::class,'index'])->name('index');
