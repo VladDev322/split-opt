@@ -27,7 +27,7 @@
           Действия
         </th>
       </tr>
-      @foreach($orders as $order)
+      @foreach($orders->reverse() as $order)
       <tr>
         <td>{{ $order->id}}</td>
         <td>{{ $order->name }}</td>
