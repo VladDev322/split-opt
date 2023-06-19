@@ -67,7 +67,10 @@ class BasketController extends Controller
       $order->products()->attach($productId);
     }
 
-
+    if (Auth::check()) {
+      $order->user_id = Auth::id();
+      $order->save();
+    }
 
     $product = Product::find($productId);
 
