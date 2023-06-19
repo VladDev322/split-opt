@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
@@ -31,12 +32,13 @@ class ProductController extends Controller
   /**
    * Store a newly created resource in storage.
    */
-  public function store(Request $request)
+  public function store(ProductRequest $request)
   {
-    Product::create($request->all());
-    $path = $request->file('image')->store('products');
     $params = $request->all();
-    $params['image'] = $path;
+    unset($params['image']);
+    if ($request->has('image')) {
+        $params['image'] = $request->file('image')->store('products');
+    }
     Product::create($params);
     return redirect()->route('products.index');
   }
@@ -61,14 +63,14 @@ class ProductController extends Controller
   /**
    * Update the specified resource in storage.
    */
-  public function update(Request $request, Product $product)
+  public function update(ProductRequest $request, Product $product)
   {
-    if (!empty($category->image)) {
-      Storage::delete($product->image);
-  }
-    $path = $request->file('image')->store('products');
     $params = $request->all();
-    $params['image'] = $path;
+    unset($params['image']);
+    if ($request->has('image')) {
+        Storage::delete($product->image);
+        $params['image'] = $request->file('image')->store('products');
+    }
     $product->update($params);
     return redirect()->route('products.index');
   }
