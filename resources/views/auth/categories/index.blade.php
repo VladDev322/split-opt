@@ -1,5 +1,5 @@
 @extends('auth.layouts.master')
-
+@admin @section('title', 'Админка: Категории') @endadmin
 @section('title', 'Категории')
 
 @section('content')

@@ -1,5 +1,5 @@
 @extends('auth.layouts.master')
-
+@admin @section('title', 'Админка: Товары') @endadmin
 @section('title', 'Товары')
 
 @section('content')
@@ -10,6 +10,9 @@
       <tr>
         <th>
           #
+        </th>
+        <th>
+          Картинка
         </th>
         <th>
           Код
@@ -30,6 +33,7 @@
       @foreach($products as $product)
       <tr>
         <td>{{ $product->id}}</td>
+        <td><img src="{{ Storage::url($product->image) }}" height="50px"></td>
         <td>{{ $product->code }}</td>
         <td>{{ $product->name }}</td>
         <td>{{ $product->category->name }}</td>
