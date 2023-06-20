@@ -18,3 +18,41 @@ div.thumbnail img {
 div .form-inline form {
   display: inline;
 }
+
+.badge {
+  border-radius: 7px;
+  margin-top: 5px;
+  transform: translateX(-20px);
+}
+
+div.labels {
+  position: absolute;
+}
+
+div.labels span.badge {
+  display: block;
+  padding: 7px;
+}
+
+span.badge.badge-success {
+  color: #fff;
+  background-color: #28a745;
+}
+
+span.badge.badge-warning {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+span.badge.badge-danger {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.thumbnail {
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
