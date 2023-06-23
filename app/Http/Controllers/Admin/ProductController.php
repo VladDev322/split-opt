@@ -72,7 +72,7 @@ class ProductController extends Controller
       $params['image'] = $request->file('image')->store('products');
     }
 
-    foreach (['new', 'hit', 'recommend'] as $fieldName) {
+    foreach (['invertor', 'wifi', 'silent'] as $fieldName) {
       if (!isset($params[$fieldName])) {
         $params[$fieldName] = 0;
       }

@@ -42,16 +42,16 @@
       <tr>
         <td>Лейблы</td>
         <td>
-          @if($product->isNew())
-          <span class="badge badge-success">Новинка</span>
+          @if($product->isWiFi())
+          <span class="badge badge-success">Поддерка WiFI</span>
           @endif
 
-          @if($product->isRecommend())
-          <span class="badge badge-warning">Рекомендуем</span>
+          @if($product->isSilent())
+          <span class="badge badge-warning">Бесшумный</span>
           @endif
 
-          @if($product->isHit())
-          <span class="badge badge-danger">Хит продаж</span>
+          @if($product->isInvertor())
+          <span class="badge badge-danger">Инвертор</span>
           @endif
         </td>
       </tr>

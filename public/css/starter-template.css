@@ -20,7 +20,7 @@ table {
 }
 
 div.thumbnail img {
-  max-height: 200px;
+  height: 200px;
 }
 
 div .form-inline form {
@@ -62,10 +62,25 @@ div.filters {
 }
 
 .thumbnail {
+  display: grid;
+  height: 460px;
   transition: transform 0.2s;
-  min-height: 400px;
 }
 
 .thumbnail:hover {
   transform: scale(1.05);
+}
+
+.thumbnail .caption {
+  align-self: end;
+}
+
+.price {
+  margin-top: 40px;
+  font-size: 30px;
+  display: inline-block;
+  margin-left: 100px;
+  font-weight: bold;
+  background-color: lightblue;
+  border-radius: 10px;
 }

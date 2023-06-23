@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
   use HasFactory;
-  protected $fillable = ['name', 'code', 'price', 'category_id', 'description', 'image', 'hit', 'new', 'recommend'];
+  protected $fillable = ['name', 'code', 'price', 'category_id', 'description', 'image', 'invertor', 'wifi', 'silent'];
 
   public function category()
   {
@@ -23,48 +23,48 @@ class Product extends Model
     return $this->price;
   }
 
-  public function scopeHit($query)
+  public function scopeInvertor($query)
   {
-    return $query->where('hit', 1);
+    return $query->where('invertor', 1);
   }
 
-  public function scopeNew($query)
+  public function scopeWifi($query)
   {
-    return $query->where('new', 1);
+    return $query->where('wifi', 1);
   }
 
-  public function scopeRecommend($query)
+  public function scopeSilent($query)
   {
-    return $query->where('recommend', 1);
+    return $query->where('silent', 1);
   }
 
-  public function setNewAttribute($value)
+  public function setInvertorAttribute($value)
   {
-    $this->attributes['new'] = $value === 'on' ? 1 : 0;
+    $this->attributes['invertor'] = $value === 'on' ? 1 : 0;
   }
 
-  public function setHitAttribute($value)
+  public function setWifiAttribute($value)
   {
-    $this->attributes['hit'] = $value === 'on' ? 1 : 0;
+    $this->attributes['wifi'] = $value === 'on' ? 1 : 0;
   }
 
-  public function setRecommendAttribute($value)
+  public function setSilentAttribute($value)
   {
-    $this->attributes['recommend'] = $value === 'on' ? 1 : 0;
+    $this->attributes['silent'] = $value === 'on' ? 1 : 0;
   }
 
-  public function isHit()
+  public function isInvertor() //hit
   {
-    return $this->hit === 1;
+    return $this->invertor === 1;
   }
 
-  public function isNew()
+  public function isWiFi() //new
   {
-    return $this->new === 1;
+    return $this->wifi === 1;
   }
 
-  public function isRecommend()
+  public function isSilent() //recommend
   {
-    return $this->recommend === 1;
+    return $this->silent === 1;
   }
 }

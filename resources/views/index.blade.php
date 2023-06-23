@@ -15,19 +15,18 @@
       </label>
     </div>
     <div class="col-sm-2 col-md-2">
-      <label for="hit">
-        <input type="checkbox" name="hit" id="hit" @if(request()->has('hit')) checked @endif> Хит
+      <label for="invertor">
+        <input type="checkbox" name="invertor" id="invertor" @if(request()->has('invertor')) checked @endif> Инвертор
       </label>
     </div>
     <div class="col-sm-2 col-md-2">
-      <label for="new">
-        <input type="checkbox" name="new" id="new" @if(request()->has('new')) checked @endif> Новинка
+      <label for="wifi">
+        <input type="checkbox" name="wifi" id="wifi" @if(request()->has('wifi')) checked @endif> Поддерка WiFI
       </label>
     </div>
     <div class="col-sm-2 col-md-2">
-      <label for="recommend">
-        <input type="checkbox" name="recommend" id="recommend" @if(request()->has('recommend')) checked @endif>
-        Рекомендуем
+      <label for="silent">
+        <input type="checkbox" name="silent" id="silent" @if(request()->has('silent')) checked @endif> Бесшумный
       </label>
     </div>
     <div class="col-sm-6 col-md-3">

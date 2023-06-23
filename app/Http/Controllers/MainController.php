@@ -21,7 +21,7 @@ class MainController extends Controller
       $productsQuery->where('price', '<=', $request->price_to);
     }
 
-    foreach (['hit', 'new', 'recommend'] as $field) {
+    foreach (['invertor', 'wifi', 'silent'] as $field) {
       if ($request->has($field)) {
         $productsQuery->$field();
       }

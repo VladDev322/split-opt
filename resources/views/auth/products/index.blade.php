@@ -12,6 +12,9 @@
                     #
                 </th>
                 <th>
+                    Картинка
+                </th>
+                <th>
                     Код
                 </th>
                 <th>
@@ -23,13 +26,14 @@
                 <th>
                     Цена
                 </th>
-                <th>
+                <th width="310px">
                     Действия
                 </th>
             </tr>
             @foreach($products as $product)
                 <tr>
                     <td>{{ $product->id}}</td>
+                    <td><img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }} image" height="50px"></td>
                     <td>{{ $product->code }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->category->name }}</td>
