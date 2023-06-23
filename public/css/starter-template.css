@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.description {
+  font-size: 3rem;
+}
+
 .row {
   margin-top: 20px;
 }
