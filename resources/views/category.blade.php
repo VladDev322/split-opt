@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>
-        {{$category->name}} {{ $category->products->count() }}
+        {{$category->name}}. Подходящих товаров: {{ $category->products->count() }}
     </h1>
     <p>
         {{ $category->description }}

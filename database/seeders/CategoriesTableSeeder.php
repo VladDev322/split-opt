@@ -15,22 +15,22 @@ class CategoriesTableSeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'name' => 'Мобильные телефоны',
-                'code' => 'mobiles',
-                'description' => 'В этом разделе вы найдёте самые популярные мобильные телефонамы по отличным ценам!',
-                'image' => 'categories/mobile.jpg',
+                'name' => '"Семерка"',
+                'code' => 'seven',
+                'description' => 'Мощность 2,1 кВт подойдет для для охлаждения комнаты площадью до 21 м2',
+                'image' => 'categories/seven.jpg',
             ],
             [
-                'name' => 'Портативная техника',
-                'code' => 'portable',
-                'description' => 'Раздел с портативной техникой.',
-                'image' => 'categories/portable.jpg',
+                'name' => '"Девятка"',
+                'code' => 'nine',
+                'description' => 'Мощность 2,7 кВт подойдет для для охлаждения комнаты площадью до 27 м2',
+                'image' => 'categories/nine.jpg',
             ],
             [
-                'name' => 'Бытовая техника',
-                'code' => 'appliances',
-                'description' => 'Раздел с бытовой техникой',
-                'image' => 'categories/appliance.jpg',
+                'name' => '"Двенадцатка"',
+                'code' => 'twelve',
+                'description' => 'Мощность 3,6 кВт подойдет для для охлаждения комнаты площадью до 36 м2',
+                'image' => 'categories/twelve.jpg',
             ],
         ]);
     }

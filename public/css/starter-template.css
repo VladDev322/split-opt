@@ -63,6 +63,7 @@ div.filters {
 
 .thumbnail {
   transition: transform 0.2s;
+  min-height: 400px;
 }
 
 .thumbnail:hover {
