@@ -85,6 +85,32 @@ div.filters {
   background-color: lightblue;
 }
 
-.product-card {
-  
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.burger {
+  z-index: 1;
+  display: none;
+}
+
+.burger__stripe {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.burger > .burger__stripe:nth-child(n+2) {
+  margin-top: 5px;
+}
+
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+}
+

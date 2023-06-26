@@ -19,6 +19,11 @@
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="{{ route('index') }}">Сплит-Опт</a>
+        <div class="burger" onclick="menu()">
+          <div class="burger__stripe"></div>
+          <div class="burger__stripe"></div>
+          <div class="burger__stripe"></div>
+        </div>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -58,6 +63,13 @@
       @yield('content')
     </div>
   </div>
+
+  <script src="/js/burger.js"></script>
+  <script>
+  function menu() {
+    document.getElementById('navbar').classList.toggle('collapse');
+  }
+</script>
 </body>
 
 </html>
