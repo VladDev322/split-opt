@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->renameColumn('new', 'invertor');
-            $table->renameColumn('hit', 'wifi');
-            $table->renameColumn('recommend', 'silent');
+            $table->renameColumn('`new`', '`invertor`');
+            $table->renameColumn('`hit`', '`wifi`');
+            $table->renameColumn('`recommend`', '`silent`');
         });
     }
 
@@ -24,9 +24,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->renameColumn('invertor', 'new');
-            $table->renameColumn('wifi', 'hit');
-            $table->renameColumn('silent', 'recommend');
+            $table->renameColumn('`invertor', 'new`');
+            $table->renameColumn('`wifi', 'hit`');
+            $table->renameColumn('`silent', 'recommend`');
         });
     }
 };
