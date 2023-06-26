@@ -64,7 +64,6 @@
     </div>
   </div>
 
-  <script src="/js/burger.js"></script>
   <script>
   function menu() {
     document.getElementById('navbar').classList.toggle('collapse');
