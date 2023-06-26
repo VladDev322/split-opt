@@ -6,7 +6,7 @@
       @endif
 
       @if($product->isSilent())
-      <span class="badge badge-warning">Бесшумный</span>
+      <span class="badge badge-warning">Тихий</span>
       @endif
 
       @if($product->isInvertor())

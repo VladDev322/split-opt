@@ -26,7 +26,7 @@
     </div>
     <div class="col-sm-2 col-md-2">
       <label for="silent">
-        <input type="checkbox" name="silent" id="silent" @if(request()->has('silent')) checked @endif> Бесшумный
+        <input type="checkbox" name="silent" id="silent" @if(request()->has('silent')) checked @endif> Тихий
       </label>
     </div>
     <div class="col-sm-6 col-md-3">

@@ -76,11 +76,15 @@ div.filters {
 }
 
 .price {
-  margin-top: 40px;
-  font-size: 30px;
   display: inline-block;
-  margin-left: 100px;
+  margin-top: 40px;
+  padding: 5px;
+  font-size: 30px;
   font-weight: bold;
-  background-color: lightblue;
   border-radius: 10px;
+  background-color: lightblue;
+}
+
+.product-card {
+  
 }
